@@ -59,7 +59,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   float rho = sqrt(x_[0]*x_[0]+ x_[1]*x_[1]);
 
   // calculate predicted meas vector 
-  z_pred << ro, 
+  z_pred << rho, 
         atan2(x_[1],x_[0]), 
         (x_[0]*x_[2] + x_[1]*x_[3])/rho;
   
